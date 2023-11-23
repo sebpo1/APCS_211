@@ -21,7 +21,7 @@
     -moz-osx-font-smoothing: grayscale;
 }
 *{
-    line-height: auto;
+    /* line-height: auto; */
     box-sizing: border-box;
 }
 em{
@@ -100,7 +100,7 @@ html, body {
 .frame1Headline {
     position: absolute;
     width: 235px;
-    max-height: 150px;
+    max-height: 122px;
     text-align: left;
     opacity: 0;
     top: 74px;
@@ -161,15 +161,15 @@ html, body {
 }
 .frame2Headline, .frame3Headline, .frame4Headline {
     position: absolute;
-    width: 260px;
-    max-height: 68px;
+    width: 235px;
+    max-height: 122px;
     text-align: left;
     opacity: 0;
-    top: 18px;
-    left: 20px;
-    line-height: 1.18em;
+    top: 74px;
+    left: 27px;
+    line-height: 1.2em;
     font-family: "VisaDialect-Medium", sans-serif;
-    font-size: 20px;
+    font-size: 34px;
     letter-spacing: 0px;
     color: #fff;
 }
@@ -177,14 +177,14 @@ html, body {
 .endframe_Headline {
     position: absolute;
     width: 260px;
-    max-height: 42px;
+    max-height: 82px;
     text-align: center;
     opacity: 0;
-    top: 142px;
+    top: 314px;
     left: 20px;
-    line-height: 1.17em;
+    line-height: 1.2em;
     font-family: "VisaDialect-Medium", sans-serif;
-    font-size: 17px;
+    font-size: 23px;
     letter-spacing: 0em;
     color: #ffffff;
 }
@@ -211,9 +211,9 @@ html, body {
 
 #end_frame_logo{
     position: absolute;
-    top: 64px;
-    left: 75px;
-    width: 142px;
+    top: 190px;
+    left: 39px;
+    width: 219px;
 }
 #terms1,#terms3 {
     position: absolute;
@@ -235,17 +235,17 @@ html, body {
 #cta {
     position: absolute;
     color: white;
-    left: 118px;
-    top: 208px;
+    left: 103px;
+    top: 547px;
     font-family: "VisaDialect-Semibold";
-    font-size: 12px;
+    font-size: 16px;
     letter-spacing: -.1px;
     opacity: 0;
 }
 .cta_line{
     position: absolute;
-    left: 118px;
-    top: 227px;
+    left: 104px;
+    top: 569px;
     width: 0px;
     height: 1px;
     background-color: white;

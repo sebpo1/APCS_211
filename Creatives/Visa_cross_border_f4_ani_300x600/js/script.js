@@ -1,4 +1,4 @@
-var adWidth = 300, adHeight = 250, cta_underline_width = 69;
+var adWidth = 300, adHeight = 600, cta_underline_width = 91;
 
 // LOADERS
 var ftLoader = {
@@ -47,6 +47,12 @@ myFT.on('instantads', function () {
 	headline4.style.color = variables.frame4_headline_color;
 	endframe_Text.style.color = variables.endframe_headline_color;
 	cta.innerHTML = variables.endframe_cta;
+
+	// textResizer(myFT.$('#headline1'), 260, 130);
+	// textResizer(myFT.$('#frame1_subheadline'), 260, 55);
+	// textResizer(myFT.$('#headline2'), 260, 130);
+	// textResizer(myFT.$('#headline3'), 260, 130);
+	textResizer(myFT.$('#endframe_Text'), 260, 85);
 
 	myFT.on("richload", function () {
 		dynAnim = myFT.richloads.f4_animation.frame.contentWindow;
@@ -108,15 +114,15 @@ function init() {
 		tl.set(['#slider_circle', '#slider_rectangle', '.overlay_blur'], { opacity: 0 });
 		TweenMax.set("#frame1bg", { filter: "blur(0px)", opacity: 1 });
 	} else { // all 5 frame animation
-		tl.to(['#headline1', '#terms1', '#frame1_subheadline', '#logo1', '#logo2'], .75, { opacity: 1 }, 'start');f
-		tl.to('#slider_circle', .5, { left: 169, delay: delay }, 'start');
-		tl.to('#slider_rectangle_yellow', .5, { opacity: 1, delay: delay }, 'start');
+		tl.to(['#headline1', '#terms1', '#frame1_subheadline', '#logo1', '#logo2'], .75, { opacity: 1 }, 'start');
+		tl.to('#slider_circle', .5, { left: 190, delay: delay }, 'start');
+		tl.to('#slider_rectangle_yellow', .5, { opacity: 1, delay: delay }, 'start');d
 		tl.to(['#headline1', '#terms1', '#frame1_subheadline', '#slider_rectangle', '.overlay_blur'], .5, { opacity: 0, delay: delay }, 'start');
 		TweenMax.to("#frame1bg", .5, { filter: "blur(0px)", opacity: 1, delay: delay }, 'start');//IE blur is not work
 		tl.to(['#headline2', '#terms3'], .75, { opacity: 1, delay: 0.25 }, 'frame3');
 		tl.to(['#headline2', '#terms3', '#slider_rectangle_yellow', '#slider_circle'], .5, { opacity: 0, delay: delay }, 'frame3');
 		delay += .5;
-	}
+	};
 	tl.to('#frame3', 0.5, { opacity: 1, delay: delay }, 'frame3');
 	tl.to('#headline3', .75, { opacity: 1, delay: delay }, '-=3.2');
 	delay += .5;
@@ -129,10 +135,10 @@ function init() {
 				dynAnim.start();
 			}
 		}, 'frame4');
-	}
+	};
 
 	tl.to('#endframe_bg', .4, { left: 0, delay: delay, ease: "quad.out" }, 'endframe');
-	tl.from('#end_frame_logo', .5, { left: 30, opacity: 0, delay: delay + .5, ease: "cubic.out" }, 'endframe');
+	tl.from('#end_frame_logo', .5, { left: 39, opacity: 0, delay: delay + .5, ease: "cubic.out" }, 'endframe');
 	tl.to('#endframe_Text', .5, { opacity: 1, delay: delay + 1 }, 'endframe');
 	tl.to('#cta', .5, { opacity: 1, delay: delay + 2 }, 'endframe');
 	tl.to('.cta_line', .5, {
@@ -145,11 +151,7 @@ function init() {
 				.addEventListener("mouseleave", mouse_out);
 		},
 	}, 'endframe');
-	textResizer(myFT.$('#headline1'), 260, 150);
-	textResizer(myFT.$('#frame1_subheadline'), 260, 55);
-	textResizer(myFT.$('#headline2'), 260, 78);
-	textResizer(myFT.$('#headline3'), 260, 78);
-	textResizer(myFT.$('#endframe_Text'), 260, 42);
+
 }
 
 function triggerRollOver() {
@@ -180,15 +182,17 @@ function textResizer(e, w, h) {
 	if (e.innerHTML.indexOf('style') === -1) {
 		var counter = 0;
 		while (e.scrollWidth > w || e.scrollHeight > h) {
-			// console.log(e);
-			// console.log("scrollW: ", e.scrollWidth, "maxW: ", w, "scrollH: ", e.scrollHeight, "maxH: ", h);
+			console.log(e);
+			console.log("scrollW: ", e.scrollWidth, "maxW: ", w, "scrollH: ", e.scrollHeight, "maxH: ", h);
 			var fs = window.getComputedStyle(e, null).getPropertyValue('font-size');
 			e.style.fontSize = (parseFloat(fs, 10) - 1) + 'px';
-			if (counter === 20) return false;
+			if (counter === 40) return false;
 			counter++;
+			console.log(e.style.fontSize);
 		}
 		return true;
 	} else {
+		console.log('hoise');
 		return false;
 	}
 }
