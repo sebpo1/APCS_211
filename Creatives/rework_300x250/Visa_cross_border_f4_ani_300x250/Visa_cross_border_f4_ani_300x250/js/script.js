@@ -49,21 +49,16 @@ myFT.on('instantads', function () {
 	cta.innerHTML = variables.endframe_cta;
 
 
-	// myFT.$("#headline1")[0].innerHTML = myFT.instantAds.headline;
-    textResize(myFT.$("#headline1"),260,50);
-
-	// myFT.$("#frame1_subheadline")[0].innerHTML = myFT.instantAds.headline;
     textResize(myFT.$("#frame1_subheadline"),260,50);
 
-	// myFT.$("#headline2")[0].innerHTML = myFT.instantAds.headline;
+    textResize(myFT.$("#headline1"),260,50);
+
     textResize(myFT.$("#headline2"),260,50);
 
-	// myFT.$("#headline3")[0].innerHTML = myFT.instantAds.headline;
     textResize(myFT.$("#headline3"),260,50);
 
 	textResize(myFT.$("#headline4"),260,55);
 
-	// myFT.$("#endframe_Text")[0].innerHTML = myFT.instantAds.headline;
     textResize(myFT.$("#endframe_Text"),260,42);
 
 
@@ -214,14 +209,11 @@ function checkRoll() {
 // }
 
 
-
 function textResize(e, w, h) {
     e = e[0];
     if (e.innerHTML.indexOf('style') === -1) {
         var counter = 0;
         while (e.scrollWidth > w || e.scrollHeight > h) {
-            // console.log(e);
-            // console.log("scrollW: ", e.scrollWidth, "maxW: ", w, "scrollH: ", e.scrollHeight, "maxH: ", h);
             var fs = window.getComputedStyle(e, null).getPropertyValue('font-size');
             e.style.fontSize = (parseFloat(fs, 10) - 1) + 'px';
             if (counter === 40) return false;

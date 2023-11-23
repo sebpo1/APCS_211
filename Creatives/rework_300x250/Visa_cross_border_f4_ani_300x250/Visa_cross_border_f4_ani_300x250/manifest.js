@@ -10,8 +10,8 @@ FT.manifest({
 	"instantAds": [
 		{ "name": "f4_animation", "type": "richLoad" },
 		{ "name": "frame1_headline", "type": "text", "default": "Unlock more of Japan with Visa. asda asd asd asda sdas asd asd ad asdasdad" },
-		{ "name": "frame1_subheadline", "type": "text", "default": "Save 20% off participating IHG® Hotels & Resorts. asdasd asd asd  asdasdasd asdad asdad a" },
-		{ "name": "frame_2_headline", "type": "text", "default": "Save 20% off participating IHG® Hotels & Resorts.<br> <em>T&Cs apply.  asdas asd asd asd Offer ends 30 June 2024.</em>" },
+		{ "name": "frame1_subheadline", "type": "text", "default": "Save 20% off participating IHG® Hotels & Resorts. asdasd asd as asdasd asd asdasdasd asd asdas asd asd" },
+		{ "name": "frame_2_headline", "type": "text", "default": "Save 20% off participating IHG® Hotels & Resorts.<br> <em>T&Cs apply. Offer ends 30 June 2024.</em>" },
 		{ "name": "frame_3_headline", "type": "text", "default": "Get more when you travel with Visa. asdasd asd as asdasd asd asdasdasd asd asdas asd asd" },
 		{ "name": "frame_4_headline", "type": "text", "default": "Pay securely with Visa wherever you go. aSxd asda asd asd asd asd asd asda " },
 		{ "name": "endframe_headline", "type": "text", "default": "Accepted at over 100 million locations worldwide." },
