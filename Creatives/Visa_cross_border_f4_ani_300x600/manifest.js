@@ -19,7 +19,7 @@ FT.manifest({
 		{ "name": "endframe_background_color", "type": "text", "default": "#1434cb" },
 		{ "name": "background_image_01", "type": "image", "default": "images/f1-2_300x600_Japan.jpg" },
 		{ "name": "background_image_03", "type": "image", "default": "images/f3_300x600_Japan.jpg" },
-		{ "name": "overlay_image", "type": "image", "default": "images/gradient_300x250.png" },
+		{ "name": "overlay_image", "type": "image", "default": "images/gradient_300x600_Japan.png" },
 		{ "name": "logo1", "type": "image", "default": "images/VISA_logo_wh.svg" },
 		{ "name": "logo2", "type": "image", "default": "images/blank.png" },
 		{ "name": "endframe_logo", "type": "image", "default": "images/logo_lockup.svg" },
