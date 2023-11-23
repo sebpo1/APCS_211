@@ -1,0 +1,25 @@
+#container {
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.adsize {
+    width: 300px;
+    height: 250px;
+}
+
+.image {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.absolute {
+    position: absolute;
+}
+#rightHand{left:300px;}
+#leftHand{left:-300px;}

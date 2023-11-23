@@ -1,0 +1,306 @@
+@font-face {
+    font-family: "VisaDialect-Bold";
+    src: url("https://cdn.flashtalking.com/fonts/visaapac/VisaDialect-Bold.woff") format("woff");
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+    font-family: "VisaDialect-Medium";
+    src: url("https://cdn.flashtalking.com/fonts/visaapac/VisaDialect-Medium.woff") format("woff");
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+    font-family: "VisaDialect-Semibold";
+    src: url("https://cdn.flashtalking.com/fonts/visaapac/VisaDialect-Semibold.woff") format("woff");
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+*{
+    line-height: auto;
+    box-sizing: border-box;
+}
+em{
+    font-size: 9px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 0.5em;
+    color: #000;
+}
+.hidden{opacity: 0;}
+html, body {
+    line-height: 1;
+    height: 100%;
+     font-family: "VisaDialect-Medium", sans-serif; 
+}
+#wrapper {
+    overflow: hidden;
+    opacity: 0;
+    /* border: 1px solid gray; */
+}
+#border {
+    position: absolute;
+    display: block;
+    width: 300px;
+    height: 250px;
+    border: solid 1px #c0c0c0;
+    pointer-events: none;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    top: 0;
+    left: 0;
+}
+.container{
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    left: 0px;
+    top: 0px;
+}
+#frame1{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    width: 300px;
+    height: 250px;
+}
+#frame1bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    opacity: 0.9;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+}
+.overlay_blur::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 250px;
+    background-color: rgb(255, 255, 255, 0.4); /* Change the color and opacity as needed */
+  }
+#headline1, #frame1_subheadline {
+    position: absolute;
+    font-weight: bold;
+}
+.frame1Headline {
+    position: absolute;
+    width: 260px;
+    max-height: 68px;
+    text-align: left;
+    opacity: 0;
+    top: 18px;
+    left: 20px;
+    line-height: 1.18em;
+    font-family: "VisaDialect-Bold", sans-serif;
+    font-size: 20px;
+    letter-spacing: 0px;
+    color: #000;
+}
+.frame1_sub_Headline {
+    width: 260px;
+    max-height: 55px;
+    text-align: left;
+    opacity: 0;
+    top: 70px;
+    left: 20px;
+    line-height: 1.17em;
+    font-family: "VisaDialect-Medium", sans-serif;
+    font-size: 18px;
+    letter-spacing: 0px;
+    color: #1434cb;
+}
+#frame4{
+    left: 300px;
+}
+#endframe_bg {
+    position: absolute;
+    left: 300px;
+    top: 0px;
+    width: 300px;
+    height: 250px;
+    background-color:#1434cb;
+}
+#slider_rectangle, #slider_rectangle_yellow {
+    position: absolute;
+    left: 92px;
+    top: 152px;
+    height: 39px;
+    width: 115px;
+    border-radius: 20px;
+}
+#slider_rectangle {
+    background-color: #1434cb;
+}
+#slider_rectangle_yellow {
+    background-color: #fcbf14;
+    opacity: 0
+}
+#slider_circle {
+    position: absolute;
+    /* left: 169px; */
+    left: 99px;
+    top: 157px;
+    height: 28px;
+    width: 28px;
+    border-radius: 20px;
+    background-color: #ffffff;
+}
+.frame2Headline, .frame3Headline, .frame4Headline {
+    position: absolute;
+    width: 260px;
+    max-height: 68px;
+    text-align: left;
+    opacity: 0;
+    top: 18px;
+    left: 20px;
+    line-height: 1.18em;
+    font-family: "VisaDialect-Medium", sans-serif;
+    font-size: 20px;
+    letter-spacing: 0px;
+    color: #fff;
+}
+
+.endframe_Headline {
+    position: absolute;
+    width: 260px;
+    max-height: 42px;
+    text-align: center;
+    opacity: 0;
+    top: 142px;
+    left: 20px;
+    line-height: 1.17em;
+    font-family: "VisaDialect-Medium", sans-serif;
+    font-size: 17px;
+    letter-spacing: 0em;
+    color: #ffffff;
+}
+#logo1{
+    opacity: 0;
+    max-height: 22px;
+    padding-right: 10px;
+}
+#logo2{
+    width:auto; 
+    max-height: 22px;
+    padding-left: 10px;
+    /* border-right: 2px solid #fff; */
+}
+.logo_container{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 260px;
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+}
+
+#end_frame_logo{
+    position: absolute;
+    top: 64px;
+    left: 75px;
+    width: 142px;
+}
+#terms1,#terms3 {
+    position: absolute;
+    font-size: 9px;
+    line-height: 1.1em;
+    letter-spacing: 0px;
+    font-family: "VisaDialect-Medium", sans-serif;
+    left: 19px;
+    opacity: 0;
+}
+#terms1 {
+    top: 123px;
+    color: #000; 
+}
+#terms3 {
+    top: 62px;
+    color: #ffffff;
+}
+#cta {
+    position: absolute;
+    color: white;
+    left: 118px;
+    top: 208px;
+    font-family: "VisaDialect-Semibold";
+    font-size: 12px;
+    letter-spacing: -.1px;
+    opacity: 0;
+}
+.cta_line{
+    position: absolute;
+    left: 118px;
+    top: 227px;
+    width: 0px;
+    height: 1px;
+    background-color: white;
+}
+.center {
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+
+	display: -webkit-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -moz-box;
+	display: flex;
+}
+/* IE10+ */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	#cta {
+        padding-bottom: 0px;
+        font-weight: 600;
+    }
+    .frame3Headline {
+        font-weight: 600;
+    }
+}
+/* Safari 11+ */
+@media not all and (min-resolution:.001dpcm)
+{ @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+	.frame1Headline {
+        letter-spacing: -1px;
+    }
+    .frame1_sub_Headline {
+        letter-spacing: -1px;
+    }
+}}
+/* Safari 10.1 */
+@media not all and (min-resolution:.001dpcm){ 
+@supports (-webkit-appearance:none) and (not (stroke-color:transparent)) {
+	.frame1Headline {
+        letter-spacing: -1px;
+    }
+    .frame1_sub_Headline {
+        letter-spacing: -1px;
+    }
+}}
+/* Mozilla */
+@-moz-document url-prefix() {
+
+    .frame1Headline {
+        letter-spacing: -.4px;
+    }
+    .frame1_sub_Headline {
+        letter-spacing: -.3px;
+    }
+}
+
