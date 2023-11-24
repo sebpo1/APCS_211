@@ -48,10 +48,10 @@ myFT.on('instantads', function () {
 	endframe_Text.style.color = variables.endframe_headline_color;
 	cta.innerHTML = variables.endframe_cta;
 
-	// textResizer(myFT.$('#headline1'), 260, 130);
-	// textResizer(myFT.$('#frame1_subheadline'), 260, 55);
-	// textResizer(myFT.$('#headline2'), 260, 130);
-	// textResizer(myFT.$('#headline3'), 260, 130);
+	textResizer(myFT.$('#headline1'), 260, 130);
+	textResizer(myFT.$('#frame1_subheadline'), 260, 55);
+	textResizer(myFT.$('#headline2'), 260, 130);
+	textResizer(myFT.$('#headline3'), 260, 130);
 	textResizer(myFT.$('#endframe_Text'), 260, 85);
 
 	myFT.on("richload", function () {
@@ -116,7 +116,7 @@ function init() {
 	} else { // all 5 frame animation
 		tl.to(['#headline1', '#terms1', '#frame1_subheadline', '#logo1', '#logo2'], .75, { opacity: 1 }, 'start');
 		tl.to('#slider_circle', .5, { left: 190, delay: delay }, 'start');
-		tl.to('#slider_rectangle_yellow', .5, { opacity: 1, delay: delay }, 'start');d
+		tl.to('#slider_rectangle_yellow', .5, { opacity: 1, delay: delay }, 'start');
 		tl.to(['#headline1', '#terms1', '#frame1_subheadline', '#slider_rectangle', '.overlay_blur'], .5, { opacity: 0, delay: delay }, 'start');
 		TweenMax.to("#frame1bg", .5, { filter: "blur(0px)", opacity: 1, delay: delay }, 'start');//IE blur is not work
 		tl.to(['#headline2', '#terms3'], .75, { opacity: 1, delay: 0.25 }, 'frame3');
@@ -182,8 +182,8 @@ function textResizer(e, w, h) {
 	if (e.innerHTML.indexOf('style') === -1) {
 		var counter = 0;
 		while (e.scrollWidth > w || e.scrollHeight > h) {
-			console.log(e);
-			console.log("scrollW: ", e.scrollWidth, "maxW: ", w, "scrollH: ", e.scrollHeight, "maxH: ", h);
+			// console.log(e);
+			// console.log("scrollW: ", e.scrollWidth, "maxW: ", w, "scrollH: ", e.scrollHeight, "maxH: ", h);
 			var fs = window.getComputedStyle(e, null).getPropertyValue('font-size');
 			e.style.fontSize = (parseFloat(fs, 10) - 1) + 'px';
 			if (counter === 40) return false;
@@ -192,7 +192,6 @@ function textResizer(e, w, h) {
 		}
 		return true;
 	} else {
-		console.log('hoise');
 		return false;
 	}
 }

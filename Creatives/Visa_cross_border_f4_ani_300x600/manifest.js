@@ -1,7 +1,7 @@
 FT.manifest({
 	"filename": "index.html",
 	"width": 300,
-	"height": 250,
+	"height": 600,
 	"clickTagCount": 1,
 	"hideBrowsers": ["ie8"],
 	"richLoads": [
@@ -11,9 +11,9 @@ FT.manifest({
 		{ "name": "f4_animation", "type": "richLoad" },
 		{ "name": "frame1_headline", "type": "text", "default": "Unlock more of Japan with Visa." },
 		{ "name": "frame1_subheadline", "type": "text", "default": "Save 20% off participating IHG® Hotels & Resorts." },
-		{ "name": "frame_2_headline", "type": "text", "default": "From crushing<br>the slopes." },
-		{ "name": "frame_3_headline", "type": "text", "default": "To finding<br>stillness." },
-		{ "name": "frame_4_headline", "type": "text", "default": "Pay securely with Visa<br>wherever<br>you go." },
+		{ "name": "frame_2_headline", "type": "text", "default": "Save 20% off participating IHG® Hotels & Resorts.<br><em>T&Cs apply. Offer ends 30 June 2024.</em>" },
+		{ "name": "frame_3_headline", "type": "text", "default": "Get more when you travel with Visa." },
+		{ "name": "frame_4_headline", "type": "text", "default": "Pay securely with Visa wherever you go." },
 		{ "name": "endframe_headline", "type": "text", "default": "Accepted at over<br>100 million locations worldwide. " },
 		{ "name": "endframe_cta", "type": "text", "default": "Learn More" },
 		{ "name": "endframe_background_color", "type": "text", "default": "#1434cb" },
