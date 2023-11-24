@@ -28,7 +28,7 @@ em{
     font-size: 9px;
     font-style: normal;
     font-weight: 200;
-    line-height: 0.5em;
+    line-height: 0em;
     color: #000;
 }
 .hidden{opacity: 0;}
@@ -45,7 +45,7 @@ html, body {
 #border {
     position: absolute;
     display: block;
-    width: 300px;
+    width: 160px;
     height: 600px;
     border: solid 1px #c0c0c0;
     pointer-events: none;
@@ -57,7 +57,7 @@ html, body {
 }
 .container{
     position: absolute;
-    width: 300px;
+    width: 160px;
     height: 600px;
     left: 0px;
     top: 0px;
@@ -66,7 +66,7 @@ html, body {
     display: flex;
     justify-content: center;
     background-color: white;
-    width: 300px;
+    width: 160px;
     height: 600px;
 }
 #frame1bg{
@@ -89,7 +89,7 @@ html, body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 300px;
+    width: 160px;
     height: 600px;
     background-color: rgb(255, 255, 255, 0.4); /* Change the color and opacity as needed */
   }
@@ -99,49 +99,49 @@ html, body {
 }
 .frame1Headline {
     position: absolute;
-    width: 235px;
+    width: 130px;
     max-height: 122px;
     text-align: left;
     opacity: 0;
-    top: 74px;
-    left: 27px;
+    top: 42px;
+    left: 15px;
     line-height: 1.2em;
     font-family: "VisaDialect-Bold", sans-serif;
-    font-size: 34px;
+    font-size: 24px;
     letter-spacing: 0px;
     color: #000;
 }
 .frame1_sub_Headline {
-    width: 235px;
+    width: 130px;
     max-height: 55px;
     text-align: left;
     opacity: 0;
-    top: 204px;
-    left: 27px;
-    line-height: 1.17em;
+    top: 167px;
+    left: 15px;
+    line-height: 1.2em;
     font-family: "VisaDialect-Medium", sans-serif;
-    font-size: 18px;
+    font-size: 14px;
     letter-spacing: 0px;
     color: #1434cb;
 }
 #frame4{
-    left: 300px;
+    left: 160px;
 }
 #endframe_bg {
     position: absolute;
-    left: 300px;
+    left: 160px;
     top: 0px;
-    width: 300px;
+    width: 160px;
     height: 600px;
     background-color:#1434cb;
 }
 #slider_rectangle, #slider_rectangle_yellow {
     position: absolute;
-    left: 53px;
-    top: 409px;
-    height: 65px;
-    width: 192px;
-    border-radius: 32px;
+    left: 30px;
+    top: 359px;
+    height: 33px;
+    width: 98px;
+    border-radius: 16px;
 }
 #slider_rectangle {
     background-color: #1434cb;
@@ -152,68 +152,68 @@ html, body {
 }
 #slider_circle {
     position: absolute;
-    left: 63px;
-    top: 418px;
-    height: 47px;
-    width: 47px;
+    left: 35px;
+    top: 363px;
+    height: 24px;
+    width: 24px;
     border-radius: 24px;
     background-color: #ffffff;
 }
 .frame2Headline, .frame3Headline, .frame4Headline {
     position: absolute;
-    width: 235px;
+    width: 130px;
     max-height: 122px;
     text-align: left;
     opacity: 0;
-    top: 74px;
-    left: 27px;
+    top: 42px;
+    left: 15px;
     line-height: 1.2em;
     font-family: "VisaDialect-Medium", sans-serif;
-    font-size: 34px;
+    font-size: 24px;
     letter-spacing: 0px;
     color: #fff;
 }
 
 .endframe_Headline {
     position: absolute;
-    width: 260px;
-    max-height: 82px;
+    width: 131px;
+    /* max-height: 82px; */
     text-align: center;
     opacity: 0;
-    top: 314px;
-    left: 20px;
+    top: 273px;
+    left: 14px;
     line-height: 1.2em;
     font-family: "VisaDialect-Medium", sans-serif;
-    font-size: 23px;
+    font-size: 18px;
     letter-spacing: 0em;
     color: #ffffff;
 }
 #logo1{
     opacity: 0;
-    max-height: 25px;
-    padding-right: 10px;
+    max-height: 31px;
+    padding-left: 3px;
 }
 #logo2{
     width:auto; 
-    max-height: 25px;
+    max-height: 31px;
     padding-left: 10px;
     /* border-right: 2px solid #fff; */
 }
 .logo_container{
     position: absolute;
-    bottom: 29px;
-    left: 30px;
-    width: 234px;
+    bottom: 20px;
+    left: 1px;
+    width: 158px;
     display: flex;
     flex-direction: row;
-    align-items: left;
+    justify-content: center;
 }
 
 #end_frame_logo{
     position: absolute;
-    top: 190px;
-    left: 39px;
-    width: 219px;
+    top: 200px;
+    left: 16px;
+    width: 118px;
 }
 #terms1,#terms3 {
     position: absolute;
@@ -235,17 +235,17 @@ html, body {
 #cta {
     position: absolute;
     color: white;
-    left: 103px;
-    top: 547px;
+    left: 37px;
+    top: 450px;
     font-family: "VisaDialect-Semibold";
-    font-size: 16px;
-    letter-spacing: -.1px;
+    font-size: 14px;
+    letter-spacing: 0.2px;
     opacity: 0;
 }
 .cta_line{
     position: absolute;
-    left: 104px;
-    top: 569px;
+    left: 39px;
+    top: 469px;
     width: 0px;
     height: 1px;
     background-color: white;

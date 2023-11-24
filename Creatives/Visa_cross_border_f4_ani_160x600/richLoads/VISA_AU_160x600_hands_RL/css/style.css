@@ -4,7 +4,7 @@
 }
 
 .adsize {
-    width: 300px;
+    width: 160px;
     height: 600px;
 }
 
@@ -19,13 +19,13 @@
 }
 
 #visa_logo{
-    left: 30px;
-    top: 546px;
-    width: 79px;
+    left: 27px;
+    top: 549px;
+    width: 98px;
 }
 
 .absolute {
     position: absolute;
 }
-#rightHand{left:300px;}
-#leftHand{left:-300px;}
+#rightHand{left:160px;}
+#leftHand{left:-160px;}
