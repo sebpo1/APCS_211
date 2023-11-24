@@ -145,10 +145,12 @@ function init() {
 				.addEventListener("mouseleave", mouse_out);
 		},
 	}, 'endframe');
-	textResizer(myFT.$('#headline1'), 260, 78);
-	textResizer(myFT.$('#frame1_subheadline'), 260, 55);
-	textResizer(myFT.$('#headline2'), 260, 78);
-	textResizer(myFT.$('#headline3'), 260, 78);
+	textResizer(myFT.$('#headline1'), 260, 52);
+	textResizer(myFT.$('#frame1_subheadline'), 137, 50);
+	textResizer(myFT.$('#headline2'), 260, 52);
+	textResizer(myFT.$('#headline3'), 260, 52);
+	textResizer(myFT.$('#headline4'), 260, 52);
+	
 	textResizer(myFT.$('#endframe_Text'), 301, 50);
 }
 
