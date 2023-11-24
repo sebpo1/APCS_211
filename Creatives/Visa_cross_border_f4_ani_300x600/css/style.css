@@ -206,7 +206,7 @@ html, body {
     width: 234px;
     display: flex;
     flex-direction: row;
-    align-items: left;
+    z-index: 1;
 }
 
 #end_frame_logo{
@@ -214,23 +214,6 @@ html, body {
     top: 190px;
     left: 39px;
     width: 219px;
-}
-#terms1,#terms3 {
-    position: absolute;
-    font-size: 9px;
-    line-height: 1.1em;
-    letter-spacing: 0px;
-    font-family: "VisaDialect-Medium", sans-serif;
-    left: 19px;
-    opacity: 0;
-}
-#terms1 {
-    top: 123px;
-    color: #000; 
-}
-#terms3 {
-    top: 62px;
-    color: #ffffff;
 }
 #cta {
     position: absolute;

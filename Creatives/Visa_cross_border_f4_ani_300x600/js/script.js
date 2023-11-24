@@ -119,8 +119,8 @@ function init() {
 		tl.to('#slider_rectangle_yellow', .5, { opacity: 1, delay: delay }, 'start');
 		tl.to(['#headline1', '#terms1', '#frame1_subheadline', '#slider_rectangle', '.overlay_blur'], .5, { opacity: 0, delay: delay }, 'start');
 		TweenMax.to("#frame1bg", .5, { filter: "blur(0px)", opacity: 1, delay: delay }, 'start');//IE blur is not work
-		tl.to(['#headline2', '#terms3'], .75, { opacity: 1, delay: 0.25 }, 'frame3');
-		tl.to(['#headline2', '#terms3', '#slider_rectangle_yellow', '#slider_circle'], .5, { opacity: 0, delay: delay }, 'frame3');
+		tl.to(['#headline2'], .75, { opacity: 1, delay: 0.25 }, 'frame3');
+		tl.to(['#headline2', '#slider_rectangle_yellow', '#slider_circle'], .5, { opacity: 0, delay: delay }, 'frame3');
 		delay += .5;
 	};
 	tl.to('#frame3', 0.5, { opacity: 1, delay: delay }, 'frame3');
@@ -128,6 +128,7 @@ function init() {
 	delay += .5;
 	tl.set('#frame4', { opacity: 1 }, 'frame4');
 	tl.to('#headline4', .75, { opacity: 1, delay: delay, }, 'frame4');
+	tl.set('.logo_container', { zIndex: 0, delay: delay }, 'frame4');
 	tl.to('#frame4', .4, { left: 0, delay: delay, ease: "quad.out" }, 'frame4');
 	if (dynAnimOn == true) {
 		tl.to('#frame4', .25, {
@@ -138,7 +139,7 @@ function init() {
 	};
 
 	tl.to('#endframe_bg', .4, { left: 0, delay: delay, ease: "quad.out" }, 'endframe');
-	tl.from('#end_frame_logo', .5, { left: 39, opacity: 0, delay: delay + .5, ease: "cubic.out" }, 'endframe');
+	tl.from('#end_frame_logo', .5, { left: 0, opacity: 0, delay: delay + .5, ease: "cubic.out" }, 'endframe');
 	tl.to('#endframe_Text', .5, { opacity: 1, delay: delay + 1 }, 'endframe');
 	tl.to('#cta', .5, { opacity: 1, delay: delay + 2 }, 'endframe');
 	tl.to('.cta_line', .5, {
@@ -182,8 +183,8 @@ function textResizer(e, w, h) {
 	if (e.innerHTML.indexOf('style') === -1) {
 		var counter = 0;
 		while (e.scrollWidth > w || e.scrollHeight > h) {
-			// console.log(e);
-			// console.log("scrollW: ", e.scrollWidth, "maxW: ", w, "scrollH: ", e.scrollHeight, "maxH: ", h);
+			console.log(e);
+			console.log("scrollW: ", e.scrollWidth, "maxW: ", w, "scrollH: ", e.scrollHeight, "maxH: ", h);
 			var fs = window.getComputedStyle(e, null).getPropertyValue('font-size');
 			e.style.fontSize = (parseFloat(fs, 10) - 1) + 'px';
 			if (counter === 40) return false;
