@@ -190,7 +190,7 @@ html, body {
 }
 #logo1{
     opacity: 0;
-    max-height: 22px;
+    max-height: 26px;
     padding-right: 10px;
 }
 #logo2{
@@ -201,17 +201,18 @@ html, body {
 }
 .logo_container{
     position: absolute;
-    bottom: 35px;
-    right: -160px;
+    bottom: 32px;
+    right: -151px;
     width: 258px;
     display: flex;
     flex-direction: row;
-    align-items: left;
+    z-index: 1;
 }
 
 #end_frame_logo{
     position: absolute;
     top: 28px;
+    left: 24px;
     width: 111px;
 }
 #terms1,#terms3 {

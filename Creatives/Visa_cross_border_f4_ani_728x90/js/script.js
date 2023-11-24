@@ -48,6 +48,13 @@ myFT.on('instantads', function () {
 	endframe_Text.style.color = variables.endframe_headline_color;
 	cta.innerHTML = variables.endframe_cta;
 
+	textResizer(myFT.$('#headline1'), 260, 60);
+	textResizer(myFT.$('#frame1_subheadline'), 137, 50);
+	textResizer(myFT.$('#headline2'), 260, 52);
+	textResizer(myFT.$('#headline3'), 260, 52);
+	textResizer(myFT.$('#headline4'), 260, 52);
+	textResizer(myFT.$('#endframe_Text'), 301, 50);
+
 	myFT.on("richload", function () {
 		dynAnim = myFT.richloads.f4_animation.frame.contentWindow;
 		console.log(dynAnim);
@@ -122,6 +129,7 @@ function init() {
 	delay += .5;
 	tl.set('#frame4', { opacity: 1 }, 'frame4');
 	tl.to('#headline4', .75, { opacity: 1, delay: delay, }, 'frame4');
+	tl.set('.logo_container', { zIndex: 0, delay: delay }, 'frame4');
 	tl.to('#frame4', .4, { left: 0, delay: delay, ease: "quad.out" }, 'frame4');
 	if (dynAnimOn == true) {
 		tl.to('#frame4', .25, {
@@ -132,7 +140,7 @@ function init() {
 	}
 
 	tl.to('#endframe_bg', .4, { left: 0, delay: delay, ease: "quad.out" }, 'endframe');
-	tl.from('#end_frame_logo', .5, { left: 24, opacity: 0, delay: delay + .5, ease: "cubic.out" }, 'endframe');
+	tl.from('#end_frame_logo', .5, { left: 0, opacity: 0, delay: delay + .5, ease: "cubic.out" }, 'endframe');
 	tl.to('#endframe_Text', .5, { opacity: 1, delay: delay + 1 }, 'endframe');
 	tl.to('#cta', .5, { opacity: 1, delay: delay + 2 }, 'endframe');
 	tl.to('.cta_line', .5, {
@@ -145,13 +153,7 @@ function init() {
 				.addEventListener("mouseleave", mouse_out);
 		},
 	}, 'endframe');
-	textResizer(myFT.$('#headline1'), 260, 52);
-	textResizer(myFT.$('#frame1_subheadline'), 137, 50);
-	textResizer(myFT.$('#headline2'), 260, 52);
-	textResizer(myFT.$('#headline3'), 260, 52);
-	textResizer(myFT.$('#headline4'), 260, 52);
-	
-	textResizer(myFT.$('#endframe_Text'), 301, 50);
+
 }
 
 function triggerRollOver() {
@@ -182,8 +184,8 @@ function textResizer(e, w, h) {
 	if (e.innerHTML.indexOf('style') === -1) {
 		var counter = 0;
 		while (e.scrollWidth > w || e.scrollHeight > h) {
-			// console.log(e);
-			// console.log("scrollW: ", e.scrollWidth, "maxW: ", w, "scrollH: ", e.scrollHeight, "maxH: ", h);
+			console.log(e);
+			console.log("scrollW: ", e.scrollWidth, "maxW: ", w, "scrollH: ", e.scrollHeight, "maxH: ", h);
 			var fs = window.getComputedStyle(e, null).getPropertyValue('font-size');
 			e.style.fontSize = (parseFloat(fs, 10) - 1) + 'px';
 			if (counter === 20) return false;

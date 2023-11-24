@@ -5,8 +5,8 @@ init();
 
 function init() {
     console.log("richload firing...");
-    // start();
-    // ftParent.tl.to(myFT.$(myFT.$("#spriteContainer")[0]), 0.3, { opacity: 1 }, 0);
+    var variables = myFT.instantAds;
+    myFT.applyClickTag(container, 1, variables.dynamic_clickthrough);
 }
 
 function start() {
