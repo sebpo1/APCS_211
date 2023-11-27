@@ -16,6 +16,7 @@ function start() {
     tl = new TimelineMax();
 
     tl.set('#container', { opacity: 1 });
+    tl.to("#visa_logo", 0.25, { opacity: 1 }, '+=0.5');
     tl.to("#rightHand", 0.5, { left: 0, ease: "cubic.out" }, '+=0.5');
     tl.to("#leftHand", 0.5, { left: 0, ease: "cubic.out" }, '-=0.35');
 

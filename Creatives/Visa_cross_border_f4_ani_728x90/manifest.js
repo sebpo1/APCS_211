@@ -15,7 +15,7 @@ FT.manifest({
 		{ "name": "frame_3_headline", "type": "text", "default": "To finding stillness." },
 		{ "name": "frame_4_headline", "type": "text", "default": "Pay securely with Visa wherever you go." },
 		{ "name": "endframe_headline", "type": "text", "default": "Accepted at over 100 million locations worldwide." },
-		{ "name": "endframe_cta", "type": "text", "default": "Learn More" },
+		{ "name": "endframe_cta", "type": "text", "default": "Learn more" },
 		{ "name": "background_image_01", "type": "image", "default": "images/f1-2_728x90_Japan.jpg" },
 		{ "name": "background_image_03", "type": "image", "default": "images/f3_728x90_Japan.jpg" },
 		{ "name": "overlay_image", "type": "image", "default": "images/gradient_728x90.png" },

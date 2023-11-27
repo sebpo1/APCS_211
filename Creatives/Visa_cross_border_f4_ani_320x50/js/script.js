@@ -48,12 +48,12 @@ myFT.on('instantads', function () {
 	endframe_Text.style.color = variables.endframe_headline_color;
 	cta.innerHTML = variables.endframe_cta;
 
-	textResizer(myFT.$('#headline1'), 260, 60);
-	textResizer(myFT.$('#frame1_subheadline'), 137, 50);
-	textResizer(myFT.$('#headline2'), 260, 52);
-	textResizer(myFT.$('#headline3'), 260, 52);
-	textResizer(myFT.$('#headline4'), 260, 52);
-	textResizer(myFT.$('#endframe_Text'), 301, 50);
+	textResizer(myFT.$('#headline1'), 120, 35);
+	textResizer(myFT.$('#frame1_subheadline'), 120, 35);
+	textResizer(myFT.$('#headline2'), 120, 35);
+	textResizer(myFT.$('#headline3'), 120, 35);
+	textResizer(myFT.$('#headline4'), 155, 35);
+	textResizer(myFT.$('#endframe_Text'), 200, 35);
 
 	myFT.on("richload", function () {
 		dynAnim = myFT.richloads.f4_animation_RL.frame.contentWindow;
@@ -117,7 +117,7 @@ function init() {
 	// } else { // all 5 frame animation
 	// }
 	tl.to(['#headline1', '#terms1', '#frame1_subheadline', '#logo1', '#logo2'], .75, { opacity: 1 }, 'start');
-	tl.to('#slider_circle', .5, { left: 434, delay: delay }, 'start');
+	tl.to('#slider_circle', .5, { left: 203, delay: delay }, 'start');
 	tl.to('#slider_rectangle_yellow', .5, { opacity: 1, delay: delay }, 'start');
 	tl.to(['#headline1', '#terms1', '#frame1_subheadline', '#slider_rectangle', '.overlay_blur'], .5, { opacity: 0, delay: delay }, 'start');
 	TweenMax.to("#frame1bg", .5, { filter: "blur(0px)", opacity: 1, delay: delay }, 'start');//IE blur is not work
@@ -142,7 +142,8 @@ function init() {
 	tl.to('#endframe_bg', .4, { left: 0, delay: delay, ease: "quad.out" }, 'endframe');
 	tl.from('#end_frame_logo', .5, { left: 0, opacity: 0, delay: delay + .5, ease: "cubic.out" }, 'endframe');
 	tl.to('#endframe_Text', .5, { opacity: 1, delay: delay + 1 }, 'endframe');
-	tl.to('#cta', .5, { opacity: 1, delay: delay + 2 }, 'endframe');
+	tl.to('#endframe_Text', .5, { opacity: 0, delay: delay + 2 }, 'endframe');
+	tl.to('#cta', .5, { opacity: 1, delay: delay + 2.5 }, 'endframe');
 	tl.to('.cta_line', .5, {
 		width: cta_underline_width, delay: delay + 2.5, onComplete: function () {
 			document
@@ -184,12 +185,13 @@ function textResizer(e, w, h) {
 	if (e.innerHTML.indexOf('style') === -1) {
 		var counter = 0;
 		while (e.scrollWidth > w || e.scrollHeight > h) {
-			// console.log(e);
-			// console.log("scrollW: ", e.scrollWidth, "maxW: ", w, "scrollH: ", e.scrollHeight, "maxH: ", h);
+			console.log(e);
+			console.log("scrollW: ", e.scrollWidth, "maxW: ", w, "scrollH: ", e.scrollHeight, "maxH: ", h);
 			var fs = window.getComputedStyle(e, null).getPropertyValue('font-size');
 			e.style.fontSize = (parseFloat(fs, 10) - 1) + 'px';
 			if (counter === 20) return false;
 			counter++;
+			console.log(e.style.fontSize);
 		}
 		return true;
 	} else {

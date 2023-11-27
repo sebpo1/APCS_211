@@ -14,9 +14,10 @@
     background-size: cover;
 }
 #visa_logo{
-    left: 621px;
-    top: 33px;
-    width: 82px;
+    left: 251px;
+    top: 17px;
+    width: 59px;
+    opacity: 0;
 }
 
 .hidden {
