@@ -1,0 +1,31 @@
+#container {
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.adsize {
+    width: 728px;
+    height: 90px;
+}
+
+.image {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#visa_logo{
+    left: 621px;
+    top: 33px;
+    width: 82px;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.absolute {
+    position: absolute;
+}
+
+#topHand{top:-90px;}
+#bottomHand{top:90px;}
